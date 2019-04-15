@@ -19,7 +19,7 @@ public class SearchTextRestController {
      * @param requestMap
      * @return
      */
-    @RequestMapping(value = "/searchText")
+    @RequestMapping(value = "/search")
     public @ResponseBody
     Map<String, Integer> searchText(@RequestBody Map<String, List<String>> requestMap) {
 
@@ -31,7 +31,7 @@ public class SearchTextRestController {
      * @param count
      * @return
      */
-    @RequestMapping(value = "/countText/{count}")
+    @RequestMapping(value = "/top/{count}")
     public @ResponseBody
     Map<String, Integer> countText(@PathVariable("count") int count) {
         return business.countText(count);
